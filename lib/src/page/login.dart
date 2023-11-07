@@ -32,11 +32,11 @@ class _LoginState extends State<Login> {
 
         //TODO AQUI SE HACE LA PETICION AL WS Y LA VALIDACIONES CORRESPONDIENTES
 
-        Navigator.pushNamed(context, 'menu_principal');
+        Navigator.pushNamed(context, 'OpcionesMenuTab');
       }
     }
 
-    return WillPopScope(
+    return WillPopScope(  //retorna pantallas anteriores oseas atras
       onWillPop: () async => true,
       child: Scaffold(
         body: SingleChildScrollView(
@@ -56,7 +56,7 @@ class _LoginState extends State<Login> {
                       ConstrainedBox(
                         constraints: const BoxConstraints(
                             maxWidth: 350,
-                            minWidth: 200
+                            minWidth: 250
                         ),
                         child: TextFormUtils(
                           enabled: true,
@@ -73,7 +73,7 @@ class _LoginState extends State<Login> {
                       ConstrainedBox(
                         constraints: const BoxConstraints(
                             maxWidth: 350,
-                            minWidth: 200
+                            minWidth: 250
                         ),
                         child: TextFormUtils(
                           enabled: true,

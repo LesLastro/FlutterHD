@@ -57,9 +57,9 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                   delay: const Duration(seconds: 0),
                   isLeft: true,
                   child: createMenu(
-                    'images/logosinfondo.png',
+                    'images/Solicitudes.png',
                     'Solicitudes',
-                    'menu'
+                    'solicitudes'
                   ),
                 ),
                 const SizedBox(height: 10,),
@@ -68,9 +68,9 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                   delay: const Duration(seconds: 0),
                   isLeft: false,
                   child: createMenu(
-                      'images/logosinfondo.png',
+                      'images/Consultas.png',
                       'Consultas',
-                      'menu'
+                      'Consultas'
                   ),
                 ),
                 const SizedBox(height: 10,),
@@ -79,9 +79,9 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                   delay: const Duration(seconds: 0),
                   isLeft: true,
                   child: createMenu(
-                      'img/logo_sin_fondo.png',
+                      'images/Historial.png',
                       'Historial',
-                      'menu'
+                      'Historial'
                   ),
                 ),
                 const SizedBox(height: 10,),
@@ -90,9 +90,9 @@ class _MenuPrincipalState extends State<MenuPrincipal> {
                   delay: const Duration(seconds: 0),
                   isLeft: false,
                   child: createMenu(
-                      'images/logosinfondo.png',
+                      'images/Sede.png',
                       'Sede',
-                      'menu'
+                      'Sede'
                   ),
                 ),
               ],
