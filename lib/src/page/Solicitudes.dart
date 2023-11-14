@@ -17,16 +17,14 @@ class _SolicitudesState extends State<Solicitudes> {
         backgroundColor: Colors.teal,
         title: const Center(child: Text('Nueva Solicitud')), //Titulo de pantalla
         ),
-        body: SingleChildScrollView( //Para realizar scroll
-          child: Container(
-            child: Column(
-              children: [
-                Text('Bodega Origen', style: TextStyle(
-                  color: Colors.teal,
-                  fontSize: 30  //Tamaño de letra
-                ),) 
-              ],
-            ),
+        body: const SingleChildScrollView( //Para realizar scroll
+          child:  Column(
+            children: [
+              Text('Bodega Origen', style: TextStyle(
+                color: Colors.teal,
+                fontSize: 30  //Tamaño de letra
+              ),) 
+            ],
           ),
         ),
       ),

@@ -66,6 +66,7 @@ class _LoginState extends State<Login> {
                           prefixIcon: const Icon(Icons.person, color: Colors.black),
                           validator: ( value ) {
                             if (value!.isEmpty) return 'El usuario es requerido';
+                            return null;
                           },
                         ),
                       ),
