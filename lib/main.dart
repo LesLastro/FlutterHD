@@ -4,8 +4,6 @@ import 'package:yes/src/page/Menu/Historial.dart';
 import 'package:yes/src/page/Menu/OpcionesMenuTab.dart';
 import 'package:yes/src/page/Menu/Sede.dart';
 import 'package:yes/src/page/MenuPrincipal.dart';
-//import 'package:yes/src/page/Scanner/DataQrPage.dart';
-//import 'package:yes/src/page/Scanner/Scanner.dart';
 import 'package:yes/src/page/Solicitudes.dart';
 import 'package:yes/src/page/login.dart';
 
@@ -28,8 +26,6 @@ class MyApp extends StatelessWidget {
         'Consultas' : (context) => const Consultas(),
         'Historial' : (context) => const Historial(),
         'Sede' : (context) => const Sede(),
-        //'Scanner' : (context) => const ScannerMain(),
-        //'Data_qr_page' : (context) => const DataQrPage(),//
       },
     );
   }

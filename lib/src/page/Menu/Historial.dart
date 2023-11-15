@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Historial extends StatefulWidget {
-  const Historial({super.key});
+  const Historial({Key? key}) : super(key: key);
 
   @override
   State<Historial> createState() => _HistorialState();
@@ -14,44 +14,81 @@ class _HistorialState extends State<Historial> {
       onWillPop: () async => true,
       child: Scaffold(
         appBar: AppBar(
-          //Para titulo de pantalla con flecha hacia atras
           backgroundColor: Colors.teal,
-          title: const Center(child: Text('Historial')), //Titulo de pantalla
+          title: const Center(child: Text('Historial')),
         ),
-        body: SingleChildScrollView(
-          //Para realizar scroll
-
+        body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                'Historial',
-                style:
-                    TextStyle(color: Colors.teal, fontSize: 30 //Tamaño de letra
-                        ),
-              ),
+              const SizedBox(height: 20),
               const SizedBox(height: 50),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      width: 200.00,
-                      height: 200.00,
-                      decoration: BoxDecoration(
-                          color: Colors.teal,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: const Center(child: Text("Historial ")),
+              ElevatedButton(
+                onPressed: () {
+                  //historial por fecha
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                child: const SizedBox(
+                  width: 280,
+                  height: 150,
+                  child: Center(
+                    child: Text(
+                      "Historial por fecha",
+                      style: TextStyle(fontSize: 20),
                     ),
                   ),
-                  const SizedBox(
-                    width: 10,
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  //historial por hora
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  InkWell(
-                    onTap: () {},
+                ),
+                child: const SizedBox(
+                  width: 280,
+                  height: 150,
+                  child: Center(
+                    child: Text(
+                      "Historial por hora",
+                      style: TextStyle(fontSize: 20),
+                    ),
                   ),
-                ],
-              )
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  //historial por usuario
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                child: const SizedBox(
+                  width: 280,
+                  height: 150,
+                  child: Center(
+                    child: Text(
+                      "Historial por usuario",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

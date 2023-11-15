@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Solicitudes extends StatefulWidget {
-  const Solicitudes({super.key});
+  const Solicitudes({Key? key}) : super(key: key);
 
   @override
   State<Solicitudes> createState() => _SolicitudesState();
@@ -13,22 +13,66 @@ class _SolicitudesState extends State<Solicitudes> {
     return WillPopScope(
       onWillPop: () async => true,
       child: Scaffold(
-        appBar: AppBar(  //Para titulo de pantalla con flecha hacia atras
-        backgroundColor: Colors.teal,
-        title: const Center(child: Text('Nueva Solicitud')), //Titulo de pantalla
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: const Text('Nueva Solicitud'),
+          centerTitle: true,
         ),
-        body: const SingleChildScrollView( //Para realizar scroll
-          child:  Column(
-            children: [
-              Text('Bodega Origen', style: TextStyle(
-                color: Colors.teal,
-                fontSize: 30  //Tamaño de letra
-              ),) 
-            ],
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                      },
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.teal, 
+                    ),
+                      child: const Text('Consumibles')
+                      ),
+                  ]
+                ),
+                const SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Ingrese Bodega Origen...',
+                      prefixIcon: const Icon(Icons.search),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                    ),
+                    onChanged: (value) {
+                    },
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Ingrese Bodega Destino...',
+                      prefixIcon: const Icon(Icons.search),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                    ),
+                    onChanged: (value) {
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
-
   }
 }
